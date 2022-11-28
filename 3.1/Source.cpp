@@ -4,24 +4,6 @@
 
 using namespace std;
 
-void randomizer(double& min, double& max, double& step, int& n, bool fileSystem)
-{
-    srand(time(NULL));
-    if (fileSystem) std::cout << "Робота з файлами включена" << std::endl;
-    else std::cout << "Робота з файлами відключена" << std::endl;
-
-    min = rand() % 40 - 20;
-    while (min > max)
-        max = rand() % 40 - 20;
-    step = rand() % 5 + 1;
-    n = rand() % 3 + 1;
-    std::cout << "min = " << min << "\nmax = " << max << "\nstep = " << step << "\nn = " << n << std::endl;
-    system("pause");
-    system("cls");
-
-    if (fileSystem) std::cout << "Робота з файлами включена" << std::endl;
-    else std::cout << "Робота з файлами відключена" << std::endl;
-}
 
 void checkInputValidity()                 
 {
@@ -113,7 +95,7 @@ int main()      // enter
     int y = 0;
     float x = 0;
 
-    randomizer( min,  max, step,  n,  fileSystem);
+    
 
     try
     {
